@@ -5,6 +5,7 @@ calculates the total value of a stock portfolio over time.
 """
 
 import os
+
 import matplotlib.pyplot as plt
 import yfinance as yf
 from dotenv import load_dotenv
