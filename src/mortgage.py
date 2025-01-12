@@ -156,7 +156,7 @@ def main():
         LOAN_TERM_YEARS,
         LOAN_START_YEAR,
     )
-    schedule = calculator.generate_amortization_schedule()
+    calculator.generate_amortization_schedule()
     df = calculator.create_dataframe()
     yearly_summary = calculator.generate_yearly_summary(df)
     calculator.generate_visuals(df, yearly_summary)
