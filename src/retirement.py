@@ -48,7 +48,7 @@ class RetirementCalculator:
     def calculate_fund_growth(self):
         """Calculate the growth of the retirement fund over time."""
         fund = self.current_pension
-        for year in range(1, self.years_to_retirement + 1):
+        for _ in range(1, self.years_to_retirement + 1):
             fund += self.annual_contribution
             fund += fund * self.annual_growth_rate  # Growth on the total fund
             self.fund_values.append(fund)
