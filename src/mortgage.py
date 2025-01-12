@@ -6,9 +6,10 @@ mortgage.py: A simple mortgage
 """
 
 import os
-from dotenv import load_dotenv
+
 import matplotlib.pyplot as plt
 import pandas as pd
+from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv("mortgage_info.env")
