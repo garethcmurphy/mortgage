@@ -1,6 +1,10 @@
+#!/usr/bin/env python3
+"""
+portfolio.py: A simple portfolio tracker that fetches stock prices and
+calculates the total value of a stock portfolio over time.
+"""
 
 import os
-import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv

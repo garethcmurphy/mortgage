@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+retirement.py: A simple retirement
+ calculator that estimates the growth
+   of a retirement fund over time.
+"""
 import os
 from dotenv import load_dotenv
 import matplotlib.pyplot as plt
