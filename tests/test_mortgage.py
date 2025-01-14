@@ -19,6 +19,7 @@ class TestMortgageCalculator(unittest.TestCase):
         )
 
     def test_monthly_payment(self):
+        """Test the calculation of the monthly payment."""
         expected_payment = (
             1610.46  # This value should be calculated based on the formula
         )
@@ -27,11 +28,13 @@ class TestMortgageCalculator(unittest.TestCase):
         )
 
     def test_amortization_schedule(self):
+        """Test the amortization schedule generation."""
         schedule = self.calculator.generate_amortization_schedule()
         self.assertEqual(len(schedule), self.loan_term_years * 12)
         self.assertAlmostEqual(schedule[-1]["Remaining Balance"], 0, places=2)
 
     def test_dataframe_creation(self):
+        """test the creation of a DataFrame from the amortization schedule."""
         schedule = self.calculator.generate_amortization_schedule()
         df = self.calculator.create_dataframe()
         self.assertEqual(len(df), len(schedule))
@@ -48,7 +51,8 @@ class TestMortgageCalculator(unittest.TestCase):
         )
 
     def test_yearly_summary(self):
-        schedule = self.calculator.generate_amortization_schedule()
+        """test the generation of a yearly summary from the amortization DataFrame."""
+        _ = self.calculator.generate_amortization_schedule()
         df = self.calculator.create_dataframe()
         yearly_summary = self.calculator.generate_yearly_summary(df)
         self.assertEqual(len(yearly_summary), self.loan_term_years)
