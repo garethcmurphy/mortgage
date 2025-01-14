@@ -1,9 +1,11 @@
+"""unittests for the mortgage module."""
 import unittest
 
 from mortgage import MortgageCalculator
 
 
 class TestMortgageCalculator(unittest.TestCase):
+    """unittests for the mortgage module."""
     def setUp(self):
         self.loan_amount = 300000
         self.annual_interest_rate = 0.05

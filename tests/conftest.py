@@ -1,7 +1,9 @@
-
+"""conftest.py"""
 import os
 import sys
+
 import pytest
+
 
 # Add the module's directory to sys.path
 @pytest.fixture(scope="session", autouse=True)
