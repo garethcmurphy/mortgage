@@ -97,7 +97,7 @@ class MortgageCalculator:
         plt.ylabel("Remaining Balance (DKK)")
         plt.grid(True)
         plt.legend()
-        plt.show()
+        plt.savefig("src/assets/images/remaining_balance.png")
 
         # Principal vs Interest Payments Over Time
         plt.figure(figsize=(10, 6))
@@ -108,7 +108,7 @@ class MortgageCalculator:
         plt.ylabel("Payment Amount (DKK)")
         plt.grid(True)
         plt.legend()
-        plt.show()
+        plt.savefig("src/assets/images/principal_vs_interest_payments.png")
 
         # Total Payments vs Remaining Balance
         plt.figure(figsize=(10, 6))
@@ -135,7 +135,7 @@ class MortgageCalculator:
         plt.ylabel("Amount (DKK)")
         plt.grid(True)
         plt.legend()
-        plt.show()
+        plt.savefig("src/assets/images/yearly_payments_and_balance.png")
 
     def print_summary(self, df):
         """Print a summary of the mortgage calculations."""
